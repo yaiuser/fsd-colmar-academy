@@ -1,0 +1,48 @@
+/* TODO */
+
+/* Reset CSS */
+/* Universal selector (*) targets every element (regardless tag, class, ID) */
+
+/* TODO */
+
+/** Start of Desktop Section **/
+/** ************************ **/
+
+/* Set up the navbar for the desktop */
+
+
+/* Set up logo styles */
+
+
+/* Set up navigation links' styles */
+
+
+/* Set up header area */
+
+
+/* hover effect for call to action link */
+
+
+/* Set up practice section */
+
+
+/* Hide events mobile */
+
+
+/** ********************** **/
+/** End of Desktop Section **/
+
+
+/* TODO */
+
+/** Start of Mobile Section **/
+/** *********************** **/
+
+/* if the width of screen is 640px and below (aka 40rem x 16px) */
+@media screen and (max-width: 40rem ) {
+    
+
+}
+
+/* *********************** */
+/** End of Mobile Section **/
