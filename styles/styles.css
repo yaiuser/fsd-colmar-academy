@@ -5,7 +5,7 @@
 *{
     margin: 0;
     padding: 0;
-    outline: 1px dashed #ddd;
+    /* outline: 1px dashed #000; */
 }
 
 html{
@@ -27,6 +27,11 @@ a{
     display: grid;
     grid-template-columns: [full-start] 0.6fr [center-end center-start] 0.4fr [full-end];
     grid-template-rows: repeat(6, min-content);
+}
+
+.section-title{
+    padding: 2rem 0;
+    text-align: center;
 }
 
 /* TODO */
@@ -93,21 +98,27 @@ nav > a{
 
 /* Set up header area */
 header{
-    background-color: #d8d8d8;
-    display: flex;
+    display: flex;                  /* Enable flexbox layout  */
+    align-items: center;            /* Centers content vertically */
+    justify-content: center;        /* Center content horizontally */
+    background-color: #d8d8d8;      /* Set the bkgnd colour */  
 }
 
-header img{
-    width: 100%;
-    padding: 2rem 1.5rem;
+.imgcontainer{
+    padding: 2rem 1.5rem;           /* Render padding of the containter as required */
 }
 
-header>div{
+header > img{
+    max-width: 100%;                /* Set the max width img can take */
+    height: auto;                   /* Set img to maintain proportionality - aspect ratio*/
+}
+
+header > div{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 1.5rem;
-    align-items: left;
+    flex-direction: column;         /* Set content in a single column*/
+    justify-content: space-evenly;  /* Center content horizontally */
+    height: 18rem;                  /* Adjust desired height of container */
+    padding-right: 2rem;            /* padding for right header */
 }
 
 header div > h1{
@@ -126,11 +137,167 @@ header div > a{
     text-align: center;
     padding: 0.5rem 0; /* top-bottom(0.5rem), left-right(0) */
 }
+
 /* hover effect for call to action link */
 
 
 /* Set up practice section */
 
+.practice{
+    display: flex;
+    /* align-items: center; */
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.practice > .imgcontainer > img{
+    max-width: 100%;
+    height: auto;
+}
+
+.practice > .practice-text{
+    padding: 0 1.5rem;
+}
+
+.practice > .practice-text > h1{
+    font-size: xx-large;
+    margin-bottom: 1.5rem;
+}
+
+.practice > .practice-text > p{
+    font-size: small;
+    font-weight: lighter;
+}
+
+.practice > .practice-text > p > span{
+    font-weight: bold;
+    display: block;
+    padding: 2rem 0;
+    margin: 0;
+}
+
+/* Set up events section */
+
+.events{
+    display:grid;
+    grid-template-rows: repeat(3, min-content);
+    border-left: 1px solid #e7e7e7;
+}
+
+.events .events-block:first-child{
+    padding-top: 2rem;
+}
+
+.events .events-block {
+    display: grid;
+    grid-template-columns: 0.35fr 0.65fr;
+    align-items: center;
+    border-bottom: 1px solid #e7e7e7;
+    padding: 1rem;
+}
+
+.events .events-block:last-of-type {
+    background-color: #d8d8d8;
+}
+
+.events img{
+    max-width: 100%;
+    height: auto;
+}
+
+.events .events-text{
+    margin-left: 1rem;
+    height: 100%;
+    align-content: center;
+}
+
+.events .events-text h3{
+    font-size: large;
+}
+
+.events .events-text p{
+    font-size: small;
+}
+
+.events .events-text a{
+    color: #3434c6;
+    font-size: small;
+}
+
+/* Set up learning section */
+
+.learning{
+    background-color: #d8d8d8;
+    grid-column: full-start / full-end;
+}
+
+.courses-cards{
+    padding: 0 4.5rem 2rem;
+    display: grid;
+    grid-template-columns: 0.333fr 0.333fr 0.333fr;
+    column-gap: 2rem;
+}
+
+.card{
+    background-color: #fff;
+}
+
+.card img{
+    width: 100%;
+    height: auto;
+}
+
+
+.card-text{
+    padding: 1rem 1rem min(1.5rem) 1rem;
+}
+
+.card-text p{
+    margin-top: 0.5rem
+}
+
+/* End of learning section */
+
+/* Set up thesis section */
+
+.thesis{
+    background-color: #f3f5f5;
+    grid-column: full-start / full-end;
+}
+
+/* End of thesis section */
+
+/* Set up footer section */
+footer{
+    grid-column: full-start / full-end;
+    display: flex;
+    justify-content: space-between;
+    background-color: #f3f5f5;
+    font-size: 0.75rem;
+    color:#a7a7a6;
+    border-top: 1px solid #e1e2e3;
+    padding-top: 1rem;
+    padding-left: 1.5rem;
+    padding-bottom: 2rem;
+    padding-right: 0.5rem;
+}
+
+footer ul{
+    list-style: none;
+    display: flex;
+}
+
+footer ul li{
+    margin-right: 0.5rem;
+}
+
+footer ul li a{
+    color: #3434c6;
+}
+
+footer ul li a:visited{
+    color: #f00;
+}
 
 /* Hide events mobile */
 
