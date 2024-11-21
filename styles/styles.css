@@ -145,7 +145,6 @@ header div > a{
 
 .practice{
     display: flex;
-    /* align-items: center; */
     justify-content: flex-start;
     flex-direction: column;
 }
@@ -173,7 +172,7 @@ header div > a{
     font-weight: bold;
     display: block;
     padding: 2rem 0;
-    margin: 0;
+    margin: auto;
 }
 
 /* Set up events section */
@@ -200,26 +199,26 @@ header div > a{
     background-color: #d8d8d8;
 }
 
-.events img{
-    max-width: 100%;
+.events > .events-block > .events-img-desktop{
+    width: 100%;
     height: auto;
 }
 
-.events .events-text{
+.events >.events-block > .events-text{
     margin-left: 1rem;
     height: 100%;
     align-content: center;
 }
 
-.events .events-text h3{
+.events >.events-block > .events-text h3{
     font-size: large;
 }
 
-.events .events-text p{
+.events > .events-block > .events-text p{
     font-size: small;
 }
 
-.events .events-text a{
+.events >.events-block > .events-text a{
     color: #3434c6;
     font-size: small;
 }
@@ -254,7 +253,7 @@ header div > a{
 
 .card-text p{
     margin-top: 0.5rem
-}
+} 
 
 /* End of learning section */
 
@@ -265,6 +264,62 @@ header div > a{
     grid-column: full-start / full-end;
 }
 
+.thesis-inner{
+    display: grid;
+    grid-template-columns: 60fr 40fr;
+}
+
+.left-thesis{
+    padding-left: 1.5rem;
+    padding-bottom: 2rem;
+    padding-right: 1.5rem;
+}
+
+.left-thesis video{
+    width: 100%;
+}
+
+.left-thesis-text{
+    padding-top: 1.5rem;
+}
+
+.left-thesis-text p{
+    padding-top: 0.5rem;
+}
+
+.right-thesis{
+    display: grid;
+    grid-template-rows: repeat(2, min-content);
+}
+
+.right-thesis > .thesis-block{
+    display: grid;
+    grid-template-columns: 0.35fr 0.65fr;
+    align-items: center;
+    padding: 1rem;
+}
+
+.right-thesis > .thesis-block:first-of-type{
+    background-color: #d8d8d8;
+}
+
+.right-thesis > .thesis-block > img{
+    width: 100%;
+}
+
+.right-thesis > .thesis-block > .block-text{
+    padding: 1rem;
+}
+
+.right-thesis > .thesis-block > .block-text h3{
+    font-size: large;
+}
+
+.right-thesis > .thesis-block > .block-text p{
+    font-size: small;
+}
+
+
 /* End of thesis section */
 
 /* Set up footer section */
@@ -273,7 +328,7 @@ footer{
     display: flex;
     justify-content: space-between;
     background-color: #f3f5f5;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     color:#a7a7a6;
     border-top: 1px solid #e1e2e3;
     padding-top: 1rem;
@@ -299,8 +354,20 @@ footer ul li a:visited{
     color: #f00;
 }
 
+/* Hide nav for mobile */
+#nav-mobile{
+    display: none;
+}
+
 /* Hide events mobile */
 
+.events > .events-block > .events-img-mobile{
+        display: none;
+    }
+
+.events-h3-mobile{
+    display: none;
+}
 
 /** ********************** **/
 /** End of Desktop Section **/
@@ -313,8 +380,156 @@ footer ul li a:visited{
 
 /* if the width of screen is 640px and below (aka 40rem x 16px) */
 @media screen and (max-width: 40rem ) {
-    
 
+    /* Hide the desktop <nav> */
+    nav, .practice{
+        display: none;
+    }
+
+    /* Display mobile <nav> */
+    #nav-mobile{
+        display: flex;
+        justify-content: space-around;
+        grid-column: full-start/full-end;
+        height: 4rem;
+    }
+
+    /* Set header image to take up entire viewport width */
+    header{
+        display: grid;
+        grid-column: full-start/full-end;
+    }
+
+    .imgcontainer{
+        padding: 0;
+    }
+
+    header > div {
+        display: block;
+        width: auto;
+        padding: 2rem 1rem;
+        height: auto;
+    }
+
+    header > div > h2{
+        margin-top: 2rem;
+        margin-bottom: 1.5rem;
+
+    }
+
+    /* Set up events for mobile */
+    .events{
+        display: grid;
+        grid-column: full-start / full-end;
+        border-left: none;
+    }
+    
+    .events > .events-block{
+        display: flex;
+        flex-direction: column;
+        padding: 4rem 1rem 0 1rem;
+        border-bottom: none;
+    }
+
+    .events > .events-block:first-child{
+        padding-top: 1rem;
+    }
+
+    .events .events-block:last-of-type {
+        background-color: #fff;
+        padding-bottom: 2rem;
+    }
+
+    .events > .events-block > .events-img-desktop{
+        display: none;
+    }
+
+    .events > .events-block > .events-img-mobile{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .events > .events-block > .events-text{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 100%;
+        margin-left: 1rem;
+        height: 5rem;
+    }
+
+    .events-h3-desktop{
+        display: none;
+    }
+
+    .events-h3-mobile{
+        display: flex;
+    }
+
+    /* Set up learning for mobile */
+
+    .learning{
+        background-color: #fff;
+        border: 1px solid #e8ebea
+    }
+
+    .section-title{ /* applicable for thesis section as well */
+        padding: 2rem 0 1rem;
+        text-align: center;
+    }
+
+    .courses-cards{
+        padding: 0 1rem 0.5rem 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .courses-cards:last-of-type{
+        margin-bottom: 2rem;
+    }
+
+    .courses-cards > .card{
+        background-color: #d8d8d8;
+        margin-bottom: 0.5rem;
+    }
+
+    .courses-cards > .card:last-of-type{
+        margin-bottom: 0;
+    }
+
+    .courses-cards img, .courses-cards p{
+        display: none;
+    }
+
+    .courses-cards > .card .card-text{
+        padding: 1rem 0 1.5rem 1rem;
+    }
+
+    /* Set up thesis for mobile */
+
+    .right-thesis, .left-thesis-text{
+        display: none;
+    }
+
+    .thesis-inner{
+        display: block;
+        padding-bottom: 1.5rem;
+    }
+
+    .left-thesis{
+        padding: 0;
+    }
+
+    /* Set up footer for mobile */
+
+    footer{
+        padding: 1rem;
+    }
+
+    footer > ul{
+        display: none;
+    }
 }
 
 /* *********************** */

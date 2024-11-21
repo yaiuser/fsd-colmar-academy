@@ -29,6 +29,16 @@
     </nav>
     <!-- End of Navbar -->
 
+    <!-- TODO -->
+
+    <!-- Start of Navbar for mobile -->
+    <nav id="nav-mobile">
+        <a href="#"><img src="assets/images/ic-logo.svg" alt="Mobile Logo Home"></a>
+        <a href="#"><img src="assets/images/ic-on-campus.svg" alt="Mobile Logo Campus"></a>
+        <a href="#"><img src="assets/images/ic-online.svg" alt="Mobile Logo Online"></a>
+        <a href="#"><img src="assets/images/ic-login.svg" alt="Mobile Logo Login"></a>
+    </nav>
+    <!-- End of Navbar for mobile -->
 
     <!-- TODO -->
     <!-- 2.  Start of header -->
@@ -60,8 +70,7 @@
         </div>
         <div class="practice-text">
             <h1>It doesn't hurt to keep practicing</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto iure corrupti neque reprehenderit optio aliquam ipsa possimus perferendis consectetur eos.</p>
-            <p><span>Emanuel, Sr Strategist at Hiring.com</span></p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto iure corrupti neque reprehenderit optio aliquam ipsa possimus perferendis consectetur eos.<span>Emanuel, Sr Strategist at Hiring.com</span></p>
         </div>
     </section>
     <!-- End of practice -->
@@ -70,29 +79,44 @@
     <!-- TODO -->
     <!-- 3.1. Start of events -->
     <section class="events">
+
         <div class="events-block">
-            <img src="assets/images/information-orientation.jpg" alt="Event Orientation Image">
+
+            <img class="events-img-desktop" src="assets/images/information-orientation.jpg" alt="Event Orientation Image">
+            <img class="events-img-mobile" src="assets/images/information-orientation-mobile.jpg" alt="Event Orientation Image">
+
             <div class="events-text">
                 <h3>Orientation Date</h3>
                 <p>Tue 10/11 & Wed 10/12: 8am-3pm </p>
                 <a href="#">Read More</a>
             </div>
         </div>
+
         <div class="events-block">
-            <img src="assets/images/information-campus.jpg" alt="Event Orientation Image">
+
+            <img class="events-img-desktop" src="assets/images/information-campus.jpg" alt="Event Campus Image">
+            <img class="events-img-mobile" src="assets/images/information-campus-mobile.jpg" alt="Event Campus Image">
+
             <div class="events-text">
                 <h3>Our Campus</h3>
                 <p>Find which campus is close to you</p>
                 <a href="#">Read More</a>
             </div>
+
         </div>
+
         <div class="events-block">
-            <img src="assets/images/information-guest-lecture.jpg" alt="Event Orientation Image">
+
+            <img class="events-img-desktop" src="assets/images/information-guest-lecture.jpg" alt="Event Guest Lecture Image">
+            <img class="events-img-mobile" src="assets/images/information-guest-lecture-mobile.jpg" alt="Event Guest Lecture Image">
+
             <div class="events-text">
-                <h3>Our Guest Lecture</h3>
+                <h3 class="events-h3-desktop">Our Guest Lecture</h3>
+                <h3 class="events-h3-mobile">Special Guest Lecture</h3>
                 <p>Join a keynote with Oliver Sack about music in medical treatment</p>
                 <a href="#">Read More</a>
             </div>
+
         </div>
     </section>
     <!-- End of events -->
@@ -180,6 +204,33 @@
     <section class="thesis">
         <div class="section-title">
             <h1>Thesis exhibit</h1>
+        </div>
+        <div class="thesis-inner">
+            <div class="left-thesis">
+                <div class="videocontainer">
+                    <video src="assets/videos/thesis.mp4"></video>
+                </div>
+                <div class="left-thesis-text">
+                    <h3>Reimagine Urban</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda hic, laudantium ex quisquam tenetur quae, fugit dolores dolorem debitis asperiores explicabo optio accusamus magni error enim placeat aliquam harum molestiae ipsum?</p>
+                </div>
+            </div>
+            <div class="right-thesis">
+                <div class="thesis-block">
+                    <img src="assets/images/thesis-fisma.jpg" alt="Fisma Image">
+                    <div class="block-text">
+                        <h3>Fisma: Design and Prototype</h3>
+                        <p>Designer showcase of new prototype product</p>
+                    </div>
+                </div>
+                <div class="thesis-block">
+                    <img src="assets/images/thesis-now-and-then.jpg" alt="Fisma Image">
+                    <div class="block-text">
+                        <h3>Now and then</h3>
+                        <p>Research study about New York</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <!-- End of thesis -->
